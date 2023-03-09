@@ -13,12 +13,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($products as $product)
+                @foreach ($products as $product)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $product['name'] }}</td>
-                        <td>{{ $product['category'] }}</td>
-                        <td>Rp {{ number_format($product['price'], 2, ',', '.') }}</td>
+                        <td>{{ $product->name }}</td>
+                        <td>{{ $product->category }}</td>
+                        <td>Rp {{ number_format($product->price, 2, ',', '.') }}</td>
                     </tr>
                 @endforeach
             </tbody>
